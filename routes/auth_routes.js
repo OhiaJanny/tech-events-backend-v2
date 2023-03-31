@@ -7,13 +7,13 @@ const nodemailer = require("nodemailer")
 const otpModel = require("../models/otp_model")
 
 let transport = nodemailer.createTransport({
-    host: "smtp.gmail.com",
+    host: "privateemail.com",
     service: "gmail",
     port: 465,
     secure: true,
     auth: {
-        user: "kiisifelix06@gmail.com",
-        pass: "ghkypqyfrmjztyrr",
+        user: "noreply@onecodeapp.co",
+        pass: "Libertycity2022",
     },
     tls: {
         rejectUnauthorized: false
@@ -25,7 +25,7 @@ const sendOtp = async (user, email) => {
     const otp = Math.floor(1000 + Math.random() * 9000);
     
     const mailOptions = {
-        from: 'Kiisifelix06@gmail.com',
+        from: 'noreply@onecodeapp.co',
         to: email,
         subject: 'Tech Events <Jane>',
         html: `<div>
